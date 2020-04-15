@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yo! Wassap everybody</title>
+</head>
+<body>
+{{range .Users}}
+<li>{{.GetFullName | uc}} is {{.Age}} years old</li>
+{{end}}
+{{range .Transports}}
+<li>{{.Model | ft | uc}} has {{.Doors}} doors and {{.Wheels}} wheels</li>
+{{end}}
+<p>{{template "coolest-template" "fuck that shit"}}</p>
+<footer>&copy; {{fdateMDY .Date}}</footer>
+</body>
+</html>
